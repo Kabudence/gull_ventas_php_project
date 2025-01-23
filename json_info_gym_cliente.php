@@ -5,4 +5,6 @@ if (isset($_GET['key'])) {
     $datos = get_info_gym_cliente($cliente_id);
     //echo json_encode($datos);
 }
+
 ?>
+

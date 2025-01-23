@@ -977,7 +977,7 @@ function search_products_by_name_s($searched_textx) {
 
     $searched1 = trim($searched0[0]);
     $searched2 = trim($searched0[1]);
-////////////////////////////////////////	
+////////////////////////////////////////
 
 
     $searched_text = trim($porciones[1]);
@@ -1061,7 +1061,7 @@ function search_products_by_name_new($searched_textx) {
 
     $searched1 = trim($searched0[0]);
     $searched2 = trim($searched0[1]);
-////////////////////////////////////////	
+////////////////////////////////////////
 
 
     $searched_text = trim($porciones[1]);
@@ -3046,7 +3046,7 @@ function find_size_and_category($talla, $id_category) {
     }
 }
 
-// Aqui registra nueva talla 
+// Aqui registra nueva talla
 function insert_size_for_catego($product_size, $size) {
     global $db;
 
@@ -3118,7 +3118,7 @@ function find_all_sizes_for_category($id_category) {
     return $rows;
 }
 
-//  ======================================== 
+//  ========================================
 
 function get_product_size_rubro($id_rubro) {
     global $db;
@@ -4514,7 +4514,7 @@ function insert_pantalla_color($sreen) {
     global $db;
     $sql = "INSERT INTO screen ";
     $sql .= "(id_tienda,color,codigo,image_logo,image_icono,nombre,facebook_url,instagram_url,mision , vision , objetivos,nosotros,icono_cat_productos,icono_cat_servicios,"
-            . " icono_cat_membresias,icono_cat_ofertas_promociones,icono_cat_otros,div_cat_productos,div_cat_servicios,div_cat_membresias,div_cat_ofertas_promociones,div_cat_otros,url_video,color_texto,estado) ";
+        . " icono_cat_membresias,icono_cat_ofertas_promociones,icono_cat_otros,div_cat_productos,div_cat_servicios,div_cat_membresias,div_cat_ofertas_promociones,div_cat_otros,url_video,color_texto,estado) ";
     $sql .= "VALUES (";
     $sql .= "'" . db_escape($db, $sreen['tienda']) . "',";
     $sql .= "'" . db_escape($db, $sreen['color']) . "',";
@@ -4855,7 +4855,7 @@ function obtener_categoria_by_id($id_categoria) {
     $sql .= "LEFT JOIN categories as cat on sub.id_categoria = cat.id ";
     $sql .= "WHERE id_categoria=" . db_escape($db, $id_categoria) . " ";
 
-//    echo $sql; 
+//    echo $sql;
 
     mysqli_set_charset($db, "utf8");
     $result = mysqli_query($db, $sql);
@@ -5309,7 +5309,7 @@ function get_row_by_id_user($id_user) {
     confirm_result_set($result);
     $user_rol = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    return $user_rol; // returns an assoc. array       
+    return $user_rol; // returns an assoc. array
 }
 
 function get_row_by_id_rol($id_rol) {
@@ -5323,7 +5323,7 @@ function get_row_by_id_rol($id_rol) {
     confirm_result_set($result);
     $user_rol = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    return $user_rol; // returns an assoc. array       
+    return $user_rol; // returns an assoc. array
 }
 
 function update_usuario_rol($usuario) {
@@ -5674,14 +5674,14 @@ function update_catalog_images($product_images) {
 
 function update_catalog($product) {
     global $db;
-    /* $sqlp = "SELECT COUNT(id) FROM catalogo where id='" . db_escape($db, $product['id']) . "' 
+    /* $sqlp = "SELECT COUNT(id) FROM catalogo where id='" . db_escape($db, $product['id']) . "'
       and price='" . db_escape($db, $product['price']) . "'";
       $resultp = mysqli_query($db, $sqlp);
       $count_p = mysqli_fetch_array($resultp);
       mysqli_free_result($resultp);
       $num_filap = $count_p[0]; */
 
-//$sqlpp = "SELECT COUNT(id) FROM catalogo where id='" . db_escape($db, $product['id']) . "' 
+//$sqlpp = "SELECT COUNT(id) FROM catalogo where id='" . db_escape($db, $product['id']) . "'
 //	and previous_price='" . db_escape($db, $product['previous_price']) . "'";
 //$resultpp = mysqli_query($db, $sqlpp);
 //$count_pp = mysqli_fetch_array($resultpp);
@@ -7446,7 +7446,7 @@ function get_row_by_id_dieta($id_dieta) {
     confirm_result_set($result);
     $user_rol = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    return $user_rol; // returns an assoc. array       
+    return $user_rol; // returns an assoc. array
 }
 
 function insertar_dieta($dieta) {
@@ -7495,7 +7495,7 @@ function count_get_dieta_detalle($dieta_id) {
     confirm_result_set($result);
     $fav_count = mysqli_fetch_array($result);
     mysqli_free_result($result);
-    return $fav_count[0]; // returns an assoc. array  
+    return $fav_count[0]; // returns an assoc. array
 }
 
 function get_detail_dietas_by_dieta($dieta_id) {
@@ -8369,9 +8369,9 @@ function insertar_video_destacados($video) {
     global $db;
     $sql = "INSERT INTO settings_videos ";
     $sql .= "(user_id,titulo_video_one,url_video_one,titulo_video_two,url_video_two,titulo_video_three,url_video_three,"
-            . "titulo_video_four,url_video_four,titulo_video_five,url_video_five,"
-            . "titulo_video_six,url_video_six,titulo_video_seven,url_video_seven,"
-            . "titulo_video_eight,url_video_eight,estado) ";
+        . "titulo_video_four,url_video_four,titulo_video_five,url_video_five,"
+        . "titulo_video_six,url_video_six,titulo_video_seven,url_video_seven,"
+        . "titulo_video_eight,url_video_eight,estado) ";
     $sql .= "VALUES (";
     $sql .= "'" . db_escape($db, $video['user_id']) . "',";
     $sql .= "'" . db_escape($db, $video['titulo_video_one']) . "',";
@@ -8585,7 +8585,7 @@ function get_info_gym_slider_screen_datos($id_tienda) {
                 'foto' => $url_clientes . $cliente['image_name']
             );
         }
-        
+
         foreach ($setting_videos as $setting) {
             $array_videos[] = array(
                 'cod_tienda' => $setting['user_id'],
@@ -8596,15 +8596,15 @@ function get_info_gym_slider_screen_datos($id_tienda) {
                 'titulo_video_3' => $setting['titulo_video_three'],
                 'link_video_3' => $setting['url_video_three'],
                 'titulo_video_4' => $setting['titulo_video_four'],
-                'link_video_4' => $setting['url_video_four'],                
+                'link_video_4' => $setting['url_video_four'],
                 'titulo_video_5' => $setting['titulo_video_five'],
-                'link_video_5' => $setting['url_video_five'],                
+                'link_video_5' => $setting['url_video_five'],
                 'titulo_video_6' => $setting['titulo_video_six'],
-                'link_video_6' => $setting['url_video_six'],                
+                'link_video_6' => $setting['url_video_six'],
                 'titulo_video_7' => $setting['titulo_video_seven'],
-                'link_video_7' => $setting['url_video_seven'],                
+                'link_video_7' => $setting['url_video_seven'],
                 'titulo_video_8' => $setting['titulo_video_eight'],
-                'link_video_8' => $setting['url_video_eight']  
+                'link_video_8' => $setting['url_video_eight']
             );
         }
 
@@ -8720,7 +8720,7 @@ function get_info_gym_slider_screen_datos($id_tienda) {
         $i = 1;
         foreach ($productos as $producto) {
             $productos_images = get_carro_detalle_images_products($producto['id']);
-        
+
             $array_products[] = array(
                 'codProducto' => $producto['id'],
                 'nombre' => $producto['title'],
@@ -8930,7 +8930,7 @@ function get_info_gym_productos_servicios_images($product_id) {
     $productos_images = get_carro_detalle_images_products($product_id);
     $json_encabezado = "";
 
-   $url_servidor= "https://myapp.fulventas.com/";
+    $url_servidor= "https://myapp.fulventas.com/";
 
     $url_horarios = $url_servidor . 'public/uploads/horarios/';
     $url_profesores = $url_servidor . 'public/uploads/profesores/';
@@ -9032,7 +9032,7 @@ function get_info_gym_descuentos_images($descuento_id) {
 
     $descuentos_images = get_images_by_descuento_id($descuento_id);
     $json_encabezado = "";
-    
+
     $url_servidor= "https://myapp.fulventas.com/";
 
     $url_horarios = $url_servidor . 'public/uploads/horarios/';
@@ -9083,7 +9083,7 @@ function get_info_gym_estrategias_images($estrategia_id) {
     $array_estrategias_images = array();
     $estrategias_images = get_images_by_estrategia_id($estrategia_id);
     $json_encabezado = "";
-   $url_servidor= "https://myapp.fulventas.com/";
+    $url_servidor= "https://myapp.fulventas.com/";
 
     $url_horarios = $url_servidor . 'public/uploads/horarios/';
     $url_profesores = $url_servidor . 'public/uploads/profesores/';
@@ -9337,7 +9337,7 @@ function get_info_detalle_dieta($dieta_id) {
     $detalle_dieta_result = get_info_dieta_detalle_by_id($dieta_id);
     $json_encabezado = "";
     $url_servidor= "https://myapp.fulventas.com/";
-    
+
     $url_dieta = $url_servidor . 'public/uploads/dietas/';
     $tipo_dieta_val = "";
     $disciplina_val = "";
@@ -9388,54 +9388,4 @@ function get_info_detalle_dieta($dieta_id) {
     mysqli_free_result($result);
     echo $json_encabezado;
 }
-
-function getPseslibres_byUserId($userId) {
-    global $db; // Usar la conexión global
-    write_log("Entrando a getPseslibres_byUserId con userId: $userId");
-
-    if (empty($userId) || !is_numeric($userId)) {
-        write_log("ID de usuario inválido.");
-        return ["error" => "ID de usuario inválido"];
-    }
-
-    $query = "
-        SELECT *
-        FROM paseslibre
-        JOIN users ON paseslibre.user_id = users.user_id
-        WHERE users.user_id = ?
-    ";
-
-    write_log("Consulta SQL: $query");
-
-    $stmt = $db->prepare($query); // Usar la conexión global
-    if (!$stmt) {
-        write_log("Error al preparar la consulta: " . $db->error);
-        return ["error" => "Error al preparar la consulta: " . $db->error];
-    }
-
-    $stmt->bind_param("i", $userId);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if (!$result) {
-        write_log("Error en la ejecución de la consulta: " . $stmt->error);
-        return ["error" => "Error en la ejecución de la consulta: " . $stmt->error];
-    }
-
-    if ($result->num_rows > 0) {
-        $data = [];
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
-        write_log("Resultados obtenidos: " . json_encode($data));
-        return $data;
-    } else {
-        write_log("No se encontraron pases libres para este usuario.");
-        return ["message" => "No se encontraron pases libres para este usuario."];
-    }
-}
-
-
 ?>
-<?php
-
